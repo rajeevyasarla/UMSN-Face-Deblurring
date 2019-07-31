@@ -356,7 +356,7 @@ for epoch in range(opt.niter):
 
     #x1 = xmask1*class_msk1*x_hat+(1-xmask1)*class_msk1*target
     #smaps_hat,smaps64_hat = netS(x_hat1,x_hat64)
-    if epoch>4 or (epoch<4 and epoch%2 == 0):
+    if epoch>4 or (epoch<4 and ganIterations%10 ~= 9):
       with torch.no_grad():
         smaps,smaps64 = netS(target,target_256)
       L_img_ = 0.33*criterionCAE(x_hat64, target_256) #+ 0.5*criterionCAE(smaps_hat, smaps)
