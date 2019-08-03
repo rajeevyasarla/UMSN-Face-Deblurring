@@ -12,8 +12,13 @@ We propose a novel multi-stream architecture and training methodology that explo
 2. Python 2 or 3
 3. CPU or NVIDIA GPU + CUDA CuDNN (CUDA 8.0)
 
+
 ## To test UMRL:
-python test_face_deblur.py --dataroot ./facades/github/ --valDataroot <path_to_test_data> --netG ./pretrained_models/Deblur_epoch_Best.pth
+1. Download test datasets provided the authors of Ziyi et al.
+    - https://sites.google.com/site/ziyishenmi/cvpr18_face_deblur
+2. run test_data_generation.m
+    - It renames the files counting from example 000001.png
+3. python test_face_deblur.py --dataroot ./facades/github/ --valDataroot <path_to_test_data> --netG ./pretrained_models/Deblur_epoch_Best.pth
 
 ## To train UMRL:
 python train_face_deblur.py --dataroot <path_to_train_data> --valDataroot ./facades/github/ --exp ./face_deblur --batchSize 10
