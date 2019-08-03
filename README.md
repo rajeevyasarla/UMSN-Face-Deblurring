@@ -17,7 +17,7 @@ We propose a novel multi-stream architecture and training methodology that explo
 1. Download test datasets provided the authors of Ziyi et al.
     - https://sites.google.com/site/ziyishenmi/cvpr18_face_deblur
 2. run test_data_generation.m
-    - It renames the files counting from example 000001.png
+    - It renames the files counting from 1, for example 000001.png
 3. python test_face_deblur.py --dataroot ./facades/github/ --valDataroot <path_to_test_data> --netG ./pretrained_models/Deblur_epoch_Best.pth
 
 ## To train UMRL:
