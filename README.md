@@ -14,14 +14,14 @@ We propose a novel multi-stream architecture and training methodology that explo
 4. CPU or NVIDIA GPU + CUDA CuDNN (CUDA 8.0)
 
 
-## To test UMRL:
+## To test UMSN:
 1. Download test datasets provided the authors of Ziyi et al.
     - https://sites.google.com/site/ziyishenmi/cvpr18_face_deblur
 2. run test_data_generation.m
     - It renames the files counting from 1, for example 000001.png
 3. python test_face_deblur.py --dataroot ./facades/github/ --valDataroot <path_to_test_data> --netG ./pretrained_models/Deblur_epoch_Best.pth
 
-## To train UMRL:
+## To train UMSN:
 1. Kernels are generated using,
      - [Boracchi and Foi, 2012]	Modeling the Performance of Image Restoration from Motion Blur Giacomo Boracchi and Alessandro Foi, Image Processing, IEEE Transactions on. vol.21, no.8, pp. 3502 - 3517, Aug. 2012,
      - 25000 kernels with size ranging from 13 to 29 are generated and saved as ".mat" file
