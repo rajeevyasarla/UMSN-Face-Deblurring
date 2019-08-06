@@ -10,7 +10,8 @@ We propose a novel multi-stream architecture and training methodology that explo
 ## Prerequisites:
 1. Linux
 2. Python 2 or 3
-3. CPU or NVIDIA GPU + CUDA CuDNN (CUDA 8.0)
+3. Pytorch version 0.4.1
+4. CPU or NVIDIA GPU + CUDA CuDNN (CUDA 8.0)
 
 
 ## To test UMRL:
