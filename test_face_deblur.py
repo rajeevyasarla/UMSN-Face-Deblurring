@@ -151,15 +151,15 @@ val_depth = torch.FloatTensor(opt.valBatchSize, inputChannelSize, opt.imageSize,
 val_ato = torch.FloatTensor(opt.valBatchSize, inputChannelSize, opt.imageSize, opt.imageSize)
 
 
-target_128= torch.FloatTensor(opt.batchSize, outputChannelSize, (opt.imageSize/4), (opt.imageSize/4))
-input_128 = torch.FloatTensor(opt.batchSize, inputChannelSize, (opt.imageSize/4), (opt.imageSize/4))
-target_256= torch.FloatTensor(opt.batchSize, outputChannelSize, (opt.imageSize/2), (opt.imageSize/2))
-input_256 = torch.FloatTensor(opt.batchSize, inputChannelSize, (opt.imageSize/2), (opt.imageSize/2))
+target_128= torch.FloatTensor(opt.batchSize, outputChannelSize, (opt.imageSize//4), (opt.imageSize//4))
+input_128 = torch.FloatTensor(opt.batchSize, inputChannelSize, (opt.imageSize//4), (opt.imageSize//4))
+target_256= torch.FloatTensor(opt.batchSize, outputChannelSize, (opt.imageSize//2), (opt.imageSize//2))
+input_256 = torch.FloatTensor(opt.batchSize, inputChannelSize, (opt.imageSize//2), (opt.imageSize//2))
 
-val_target_128= torch.FloatTensor(opt.batchSize, outputChannelSize, (opt.imageSize/4), (opt.imageSize/4))
-val_input_128 = torch.FloatTensor(opt.batchSize, inputChannelSize, (opt.imageSize/4), (opt.imageSize/4))
-val_target_256= torch.FloatTensor(opt.batchSize, outputChannelSize, (opt.imageSize/2), (opt.imageSize/2))
-val_input_256 = torch.FloatTensor(opt.batchSize, inputChannelSize, (opt.imageSize/2), (opt.imageSize/2))
+val_target_128= torch.FloatTensor(opt.batchSize, outputChannelSize, (opt.imageSize//4), (opt.imageSize//4))
+val_input_128 = torch.FloatTensor(opt.batchSize, inputChannelSize, (opt.imageSize//4), (opt.imageSize//4))
+val_target_256= torch.FloatTensor(opt.batchSize, outputChannelSize, (opt.imageSize//2), (opt.imageSize//2))
+val_input_256 = torch.FloatTensor(opt.batchSize, inputChannelSize, (opt.imageSize//2), (opt.imageSize//2))
 
 target, input, depth, ato = target.cuda(), input.cuda(), depth.cuda(), ato.cuda()
 val_target, val_input, val_depth, val_ato = val_target.cuda(), val_input.cuda(), val_depth.cuda(), val_ato.cuda()
