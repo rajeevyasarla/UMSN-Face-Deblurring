@@ -14,7 +14,7 @@ import torchvision.utils as vutils
 from torch.autograd import Variable
 
 from misc import *
-import models.face_fed_org as net
+import models.face_fed as net
 
 
 
