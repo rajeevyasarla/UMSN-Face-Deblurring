@@ -32,6 +32,8 @@ We propose a novel multi-stream architecture and training methodology that explo
 ## To train Segmentation Netweork
 Train Segmentation Netweork using the following command
 1. training segmentation network with clean images,
+    
     python seg_train.py --mode_clean 1 --dataroot ./facades/github/ --valDataroot ./facades/github/
 2. training segmentation network with blurry images,
+    
     python seg_train.py --mode_clean 0 --dataroot ./facades/github/ --valDataroot ./facades/github/
