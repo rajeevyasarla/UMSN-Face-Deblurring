@@ -13,6 +13,8 @@ We propose a novel multi-stream architecture and training methodology that explo
 3. Pytorch version 0.4.1
 4. CPU or NVIDIA GPU + CUDA CuDNN (CUDA 8.0)
 
+pip install -r requirements.txt
+
 
 ## To test UMSN:
 1. Download test datasets provided the authors of Ziyi et al.
