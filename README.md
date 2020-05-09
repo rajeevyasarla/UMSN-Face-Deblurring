@@ -3,7 +3,7 @@ Deblurring Face Images using Uncertainty Guided Multi-Stream Semantic Networks
 
 [Rajeev Yasarla](https://sites.google.com/view/rajeevyasarla/home), [Federico Perazzi](https://research.adobe.com/person/federico-perazzi/), [Vishal M. Patel](https://engineering.jhu.edu/ece/faculty/vishal-m-patel/)
 
-[Paper Link](https://ieeexplore.ieee.org/document/9082831/metrics) (IEEE TIP'20)
+[Paper Link](https://ieeexplore.ieee.org/document/9082831/metrics)(IEEE TIP'20)
 [arxiv version](https://arxiv.org/pdf/1907.13106.pdf)
 
     @ARTICLE{ryasarla_UMSN,
