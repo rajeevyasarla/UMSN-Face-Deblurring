@@ -3,14 +3,17 @@ Deblurring Face Images using Uncertainty Guided Multi-Stream Semantic Networks
 
 [Rajeev Yasarla](https://sites.google.com/view/rajeevyasarla/home), [Federico Perazzi](https://research.adobe.com/person/federico-perazzi/), [Vishal M. Patel](https://engineering.jhu.edu/ece/faculty/vishal-m-patel/)
 
-[Paper Link](https://arxiv.org/pdf/1907.13106.pdf)
+[Paper Link](https://ieeexplore.ieee.org/document/9082831/metrics) (IEEE TIP'20)
+[arxiv version](https://arxiv.org/pdf/1907.13106.pdf)
 
-    @article{yasarla2019deblurring,
-      title={Deblurring Face Images using Uncertainty Guided Multi-Stream Semantic Networks},
-      author={Yasarla, Rajeev and Perazzi, Federico and Patel, Vishal M},
-      journal={arXiv preprint arXiv:1907.13106},
-      year={2019}
-    }
+    @ARTICLE{ryasarla_UMSN,
+      author={R. {Yasarla} and F. {Perazzi} and V. M. {Patel}},
+      journal={IEEE Transactions on Image Processing}, 
+      title={Deblurring Face Images Using Uncertainty Guided Multi-Stream Semantic Networks}, 
+      year={2020},
+      volume={29},
+      number={},
+      pages={6251-6263},}
 
 We propose a novel multi-stream architecture and training methodology that exploits semantic labels for facial image deblurring. The proposed Uncertainty Guided MultiStream Semantic Network (UMSN) processes regions belonging to each semantic class independently and learns to combine their outputs into the final deblurred result. Pixel-wise semantic labels are obtained using a segmentation network. A predicted confidence measure is used during training to guide the network towards challenging regions of the human face such as the eyes and nose. The entire network is trained in an endto-end fashion.
 
