@@ -45,5 +45,11 @@ class Vgg16(torch.nn.Module):
         h = F.relu(self.conv4_2(h))
         h = F.relu(self.conv4_3(h))
         relu4_3 = h
+        h = F.max_pool2d(h, kernel_size=2, stride=2)
 
-        return [relu1_2, relu2_2, relu3_3, relu4_3]
+        h = F.relu(self.conv5_1(h))
+        h = F.relu(self.conv5_2(h))
+        h = F.relu(self.conv5_3(h))
+        relu5_3 = h
+
+        return [relu1_2, relu2_2, relu3_3, relu4_3, relu5_3]
