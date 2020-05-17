@@ -80,7 +80,7 @@ kernels = kernels.transpose([0,2,1])
 
 
 vgg = Vgg16()
-utils.init_vgg16('./models/')
+#utils.init_vgg16('./models/')
 state_dict_g = torch.load('VGG_FACE.pth')
 new_state_dict_g = {}
 new_state_dict_g["conv1_1.weight"]= state_dict_g["0.weight"]
