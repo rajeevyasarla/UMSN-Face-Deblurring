@@ -27,7 +27,7 @@ We propose a novel multi-stream architecture and training methodology that explo
 ```
 
 ## To test UMSN:
-1. Download test datasets provided the authors of Ziyi et al.
+1. Download test datasets provided the authors of Shen et al.
 ```
     https://sites.google.com/site/ziyishenmi/cvpr18_face_deblur
 ```
