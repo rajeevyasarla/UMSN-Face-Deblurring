@@ -36,7 +36,7 @@ parser.add_argument('--originalSize', type=int,
 parser.add_argument('--imageSize', type=int,
   default=128, help='the height / width of the cropped input image to network')
 parser.add_argument('--inputChannelSize', type=int,
-  default=3, help='size of the input channels')
+  default=3, help='size of the opt.originalSizeinput channels')
 parser.add_argument('--outputChannelSize', type=int,
   default=3, help='size of the output channels')
 parser.add_argument('--ngf', type=int, default=64)
@@ -253,27 +253,27 @@ for epoch in range(1):
             
             #x_hatcls1,x_hatcls2,x_hatcls3,x_hatcls4,x_lst1,x_lst2,x_lst3,x_lst4 = netG(val_inputv,val_inputv_256,smaps_i,smaps_i64,class1,class2,class3,class4)
             smaps,smaps64 = netS(val_inputv,val_inputv_256)
-            class1 = torch.zeros([1,1,128,128], dtype=torch.float32)
+            class1 = torch.zeros([1,1,opt.originalSize,opt.originalSize], dtype=torch.float32)
             class1[:,0,:,:] = smaps[:,0,:,:]
-            class2 = torch.zeros([1,1,128,128], dtype=torch.float32)
+            class2 = torch.zeros([1,1,opt.originalSize,opt.originalSize], dtype=torch.float32)
             class2[:,0,:,:] = smaps[:,1,:,:]
-            class3 = torch.zeros([1,1,128,128], dtype=torch.float32)
+            class3 = torch.zeros([1,1,opt.originalSize,opt.originalSize], dtype=torch.float32)
             class3[:,0,:,:] = smaps[:,2,:,:]
-            class4 = torch.zeros([1,1,128,128], dtype=torch.float32)
+            class4 = torch.zeros([1,1,opt.originalSize,opt.originalSize], dtype=torch.float32)
             class4[:,0,:,:] = smaps[:,3,:,:]
-            class_msk1 = torch.zeros([1,3,128,128], dtype=torch.float32)
+            class_msk1 = torch.zeros([1,3,opt.originalSize,opt.originalSize], dtype=torch.float32)
             class_msk1[:,0,:,:] = smaps[:,0,:,:] 
             class_msk1[:,1,:,:] = smaps[:,0,:,:] 
             class_msk1[:,2,:,:] = smaps[:,0,:,:] 
-            class_msk2 = torch.zeros([1,3,128,128], dtype=torch.float32)
+            class_msk2 = torch.zeros([1,3,opt.originalSize,opt.originalSize], dtype=torch.float32)
             class_msk2[:,0,:,:] = smaps[:,1,:,:]
             class_msk2[:,1,:,:] = smaps[:,1,:,:]
             class_msk2[:,2,:,:] = smaps[:,1,:,:]
-            class_msk3 = torch.zeros([1,3,128,128], dtype=torch.float32)
+            class_msk3 = torch.zeros([1,3,opt.originalSize,opt.originalSize], dtype=torch.float32)
             class_msk3[:,0,:,:] = smaps[:,2,:,:] 
             class_msk3[:,1,:,:] = smaps[:,2,:,:] 
             class_msk3[:,2,:,:] = smaps[:,2,:,:] 
-            class_msk4 = torch.zeros([1,3,128,128], dtype=torch.float32)
+            class_msk4 = torch.zeros([1,3,opt.originalSize,opt.originalSize], dtype=torch.float32)
             class_msk4[:,0,:,:] = smaps[:,3,:,:]  
             class_msk4[:,1,:,:] = smaps[:,3,:,:]
             class_msk4[:,2,:,:] = smaps[:,3,:,:]
@@ -310,5 +310,3 @@ for epoch in range(1):
 
             im.save(filename)
       
-      
-
