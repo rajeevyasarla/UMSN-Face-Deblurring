@@ -594,7 +594,7 @@ class scale_kernel_conf(nn.Module):
         #print(x4.size())
         residual = self.sig(self.conv_refin(self.sig(F.avg_pool2d(x4,16))))
         #print(residual)
-        residual = F.upsample_nearest(residual, scale_factor=128)
+        residual = F.interpolate(residual, size=x.size()[2:])
         #print(residual.size())
         return residual
 
