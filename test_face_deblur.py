@@ -36,7 +36,7 @@ parser.add_argument('--originalSize', type=int,
 parser.add_argument('--imageSize', type=int,
   default=128, help='the height / width of the cropped input image to network')
 parser.add_argument('--inputChannelSize', type=int,
-  default=3, help='size of the opt.originalSizeinput channels')
+  default=3, help='size of the input channels')
 parser.add_argument('--outputChannelSize', type=int,
   default=3, help='size of the output channels')
 parser.add_argument('--ngf', type=int, default=64)
@@ -57,7 +57,7 @@ parser.add_argument('--workers', type=int, help='number of data loading workers'
 parser.add_argument('--exp', default='sample', help='folder to output images and model checkpoints')
 parser.add_argument('--display', type=int, default=5, help='interval for displaying train-logs')
 parser.add_argument('--evalIter', type=int, default=500, help='interval for evauating(generating) images from valDataroot')
-opt = parser.parse_args()
+opt = parser.parse_args()pt.originalSize
 print(opt)
 
 
