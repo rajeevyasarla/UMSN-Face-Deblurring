@@ -2,5 +2,5 @@ numpy==1.22.0
 opencv-python>=4.2.0.32
 Pillow>=6.2.2
 six==1.13.0
-torch==0.4.1.post2
+torch==2.2.0
 torchvision==0.2.1
